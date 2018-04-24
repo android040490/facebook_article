@@ -1,0 +1,76 @@
+// NAV-BAR
+.nav-bar{
+    &__btn-wrapper{
+    }
+    &__btn{
+        margin: 10px;
+        width: 40px;
+        border: 2px solid #000;
+        border-radius: 3px;
+        padding: 5px 9px;
+        box-shadow: 1px 1px 3px #000;
+        background: #fff;
+        img{
+            vertical-align: middle;
+            width: 100%;
+            
+        }
+    }
+    &__navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        z-index: 10;
+        overflow: hidden;
+        display: none;
+        
+        ul{
+            height: 100%;
+            width: auto;
+            background: #fff;
+            margin: auto;
+            li{
+                padding: 10px 12px;
+            }
+        }
+    }
+}
+@media (min-width: 960px){
+    .nav-bar{
+        &__btn{
+            display: none;
+        }
+        &__navbar{
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: visible;
+            ul{
+                background: transparent;
+                display: flex;
+                justify-content: space-between;
+                width: 750px;
+                li{
+                    // display: inline-block;
+                    position: relative;
+                    transition: transform .3s linear;
+                    a::before{
+                        position: absolute;
+                        top: 0; left: 0; right: 0; bottom: 0;
+                        content: "";
+                        box-shadow: 2px 2px 4px 1px #000;
+                        opacity: 0;
+                        transition: opacity .4s linear;
+                    }                
+                    a:hover::before{
+                        opacity: 1;
+                    } 
+                }
+                li:hover{
+                    transform: translateY( -3px );
+                }  
+            }
+        }
+    }    
+}

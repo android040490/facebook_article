@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&subset=cyrillic-ext,latin-ext');
+
+
+
+
+@mixin font-style( $font-size, $color, $font-family: $font-page,
+ $font-weight: 400, $text-transform: none, $font-style: none){
+    font: {
+        size: $font-size;
+        weight: $font-weight;
+        family: $font-family;
+        style: $font-style;
+    }
+    color: $color;
+    text-transform: $text-transform;
+
+}
+
+html, body{
+    @include font-style( 16px, $font-color);
+}
+p{
+    line-height: 150%;
+}
+a{
+    color: $font-color;
+}
+
+h2{
+    @include font-style( 34px, $font-color, $font-page, 700);
+}
+h3{
+    @include font-style( 22px, $font-color, $font-page, 700);
+}
+h6{
+    @include font-style( 16px, $font-color, $font-page, 700, none, italic);
+    margin: 0;
+    text-align: center;
+}
+ul li{
+    @include font-style( 14px, $font-color, $font-page, 700, uppercase)
+}
+strong{
+    font-weight: 700;
+}

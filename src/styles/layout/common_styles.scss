@@ -1,0 +1,53 @@
+.large-wrapper{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.wrapper{
+    max-width: 750px;
+    margin: auto;
+}
+
+.active{
+    color: $col-active-li;
+}
+// Small device color white
+@media (min-width: 960px){
+    .light{
+        color: #fff;
+        *{
+            color: #fff;
+        }
+
+    }
+}
+// Large device color black
+@media (max-width: 960px){
+    .black-lg{
+        color: #000;
+        *{
+            color: #000;
+        }
+    }
+}
+
+//Large device visible
+.lg-screen{
+    display: none;
+}
+@media ( min-width: 600px){
+    .lg-screen{
+        display: block;
+    }
+}
+
+// Small device visible
+
+.sm-screen{
+    display: block;
+}
+@media ( min-width: 600px){
+    .sm-screen{
+        display: none;
+    }
+}

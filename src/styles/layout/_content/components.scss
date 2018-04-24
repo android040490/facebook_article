@@ -1,0 +1,211 @@
+//PAGE BANNER
+.page-banner{
+
+    &__banner{
+        position: relative;
+        max-width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &__banner-wrapper{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 60px;
+    }
+    &__banner-title{
+        width: 30%;
+        h2{
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+        }
+    }
+    &__banner-icon{
+        position: absolute;
+        bottom: 0;
+        left: 60px;
+        width: 10%;
+        img{
+            width: 100%;
+        }
+    }
+}
+@media ( min-width: 500px){
+    .page-banner{
+        &__banner-wrapper{
+            justify-content: flex-start;
+            align-items: center;
+        }
+        &__banner-title{
+            h2{
+                font-size: 34px;
+            }
+        }
+        &__banner-icon{
+            width: 5%;
+        }
+    }
+}
+
+//PAGE NAVIGATION
+.article-navigation{
+    padding-left: 5px;
+    &__title{
+
+    }
+    &__list-navigation{
+        ol{
+            padding-left: 25px;
+            h6{
+                margin: 20px 0 20px -15px;
+                text-align: left;
+            }
+            li{
+                padding: 5px 0;
+                a{
+                    color: $col-page-nav;
+                    font-weight: 700;
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// FIGURE
+.figure{
+    margin: 0;
+    &__title{
+        padding: 20px 0;
+        text-align: left;
+    }
+    &__caption{
+        font-size: 13px;
+        font-style: italic;
+        font-weight: 700;
+        text-align: center;
+        padding: 15px 0;
+    }
+    &__image{
+        img{
+            width: 100%;
+        }
+    }
+    &__img-lg{
+        display: none;
+    }
+    &__img-sm{
+        img{
+            display: block;
+            width: 50%;
+            margin: auto;
+        }
+        .figure__caption{
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+        }   
+    }
+    
+}
+
+
+//BUY shares BUTTON
+.buy-btn{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    cursor: pointer;
+    &__btn{
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 14px 16px;
+        background: $buy-btn-col;
+    }
+
+}
+
+// Stylized block of text
+.stylized-block{
+    padding: 20px 0;
+    &__icon{
+        float: left;
+        width: 68px;
+        height: 68px;
+        margin: 0 10px 10px 0;
+        background: $bg-icon;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+            width: 65%;
+            fill: #fff;
+        }
+    }
+    &__text{
+        h6{
+            text-align: left;
+        }
+        p{
+            margin: 0;
+        }
+    }
+}
+@media (min-width: 600px){
+    .stylized-block{
+        display: flex;
+        &__icon{
+            float: none;
+            margin: 0;
+        }
+        &__text{
+            padding-left: 30px;
+        }
+    }
+
+}
+
+
+// Footnote block
+.footnote-block{
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    border-left: 7px solid $bg-icon;
+    padding-left: 27px;
+    margin: 30px 0;
+}
+
+// Shareholders 
+.shareholders{
+    display: flex;
+    flex-direction: column-reverse;
+    &__list{
+        dl{
+            margin: 0;
+        }
+    }
+    &__image{
+        margin: auto;
+    }
+}
+@media (min-width: 600px){
+    .shareholders{
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+}

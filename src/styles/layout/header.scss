@@ -1,0 +1,58 @@
+@import "_header/components.scss";
+
+
+
+.header{
+    &__page-tools{
+        background: $bg-pagetools;
+        padding: 5px 0px;
+    }
+    &__site-navigation{
+        background: $bg-site-nav;
+    }
+}
+
+// PAGE TOOLS
+
+.page-tools{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    box-sizing: border-box;
+    &__login-tools{
+        display: flex;
+        align-items: center;
+    }
+    &__item-tool{
+        padding: 0 5px;
+    }
+}
+
+@media ( min-width: 400px){
+    .page-tools{
+        padding: 0 20px;
+    }
+}
+// HEADER NAVIGATION
+.header-navigation{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 25px 5px;
+    &__logo{
+        img{
+            width: 164px;
+        }
+    }
+    &__nav-bar{
+       display: flex;
+       align-items: center;
+    }
+}
+@media ( min-width: 400px){
+    .header-navigation{
+        padding: 25px 20px;
+    }
+}
