@@ -22,6 +22,7 @@
     box-sizing: border-box;
     &__login-tools{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
     &__item-tool{

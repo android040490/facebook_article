@@ -35,14 +35,15 @@
         }
     }
     &__secondary-footer{
+        &-navigation{
+            position: relative;
+        }
         background: $bg-secon-footer;
         padding: 39px 0 13px 0;
         &-copyright{
             text-align: center;
         }
-        &-navigation{
-            
-        }
+        
     }
 }
 @media (min-width: 780px){
